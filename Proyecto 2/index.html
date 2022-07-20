@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 2</title>
+</head>
+<body background="./image/fondo.jpg">
+   
+    
+    <div>
+        <h1 style="color: #b9c57cc9; text-align: center;"> Contador </h1>
+    </div>
+
+   <div style="text-align:center;">
+        <button id="btnDisminuir">Disminuir</button>
+        <button id="btnLimpiar">Reiniciar</button>
+        <button id="btnAumentar">Aumentar</button>
+        <p id="numeroContar"></p>
+   </div> 
+   
+
+    <script>
+        var btnDis = document.getElementById('btnDisminuir')
+        var btnLim = document.getElementById('btnLimpiar')
+        var btnAum = document.getElementById('btnAumentar')
+        var numC = document.getElementById ('numeroContar')
+        var contar = 0;
+
+        numC.textContent = 0;
+
+        btnDis.onclick= function(){
+            contar--;
+            numC.textContent=contar;
+            if(contar<0)
+            numC.style.color = "red"
+            else if 
+                (contar==0)
+                numC.style.color = "black" 
+        }
+
+        btnAum.onclick= function(){
+            contar++;
+            numC.textContent=contar;
+            if(contar>0)
+            numC.style.color = "green"
+            else if 
+                (contar==0)
+                numC.style.color = "black"    
+        }
+
+        btnLim.onclick= function(){
+            contar=0;
+            numC.textContent=0;
+            if(contar==0)
+            numC.style.color = "black"
+            }
+
+        
+
+
+        
+    </script>
+
+
+</body>
+</html>
