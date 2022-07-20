@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div id="container" class="changeBG">
+        <button type="button" id="btn-color" onclick="btnChanger()">Click Para Cambiar el color</button> 
+        <label id="colorName" style="text-align:center;">El color es: </label>
+    </div>
+
+    
+
+        
+ 
+
+    <script>
+
+
+ let colors = ["white", "orange", "indigo", "pink", "lightcoral", "black", "cyan"];
+
+ function btnChanger() {
+         let random = Math.floor(Math.random() * colors.length);
+         console.log("Random value: " + random);
+         let a = document.getElementById("container").style.background = colors[random];
+
+         document.getElementById("colorName").innerHTML= "El color es " + colors[random];
+    
+ }
+
+
+    </script>
+</body>
+</html> 
